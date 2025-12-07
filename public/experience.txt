@@ -1,0 +1,62 @@
+Perbarui Experience saya berdasarkan berikut
+
+Environmental AI Research Network (EARN) - Surabaya
+Desember 2025 – Sekarang
+ROLE = data scientist intern
+• Mengembangkan Aplikasi Dengan Pemodelan Prediktif Produksi dan Permintaan
+• Mengembangkan Pipeline Data Warehouse Pada Platform Aplikasi
+logo : /home/dimas/portofolio/template/public/assets/experience/bulog.png
+
+Environmental AI Research Network (EARN) - Surabaya
+Aug 2025 – Sekarang
+ROLE = Anggota
+• Mengikuti kegiatan pengabdian Masyarakat berbasis kepedulian lingkungan.
+• Melakukan penelitian sebagai sarana sulusi masalah lingkungan berbasis teknologi informasi dan kecerdasan buatan.
+logo : /home/dimas/portofolio/template/public/assets/experience/pens.png
+
+EEPIS Robot Soccer On Wheeld (ERSOW) - Surabaya
+Aug 2024 – Sekarang
+Artificial Intelligent Engineer & General Manager
+• Bertanggung jawab mengkoordinasikan setiap divisi di tim ERSOW untuk mencapai target dan hasil riset tim yang akan dilombakan pada Kontes Robot Sepak Bola Indonesia - Beroda (KRSBI-B).
+• Pengembangan navigasi robot otonom menggunakan medan potensial untuk bergerak menuju tujuan sambil menghindari rintangan.
+• Pengembangan model prediksi arah bola untuk menghadang tendangan robot.
+logo = /home/dimas/portofolio/template/public/assets/experience/ersow.png
+
+EEPIS Data Enthusiast (EDUST) - Surabaya
+Aug 2025 - Des 2025
+mentor
+erbagi materi sekaligus sesi hands-on bersama teman-teman di komunitas EDUST.
+Topik yang kami bahas adalah Data Engineering, khususnya tentang operasi SQL dalam konteks Data Science.
+
+
+EEPIS Robot Soccer On Wheeld (ERSOW) - Surabaya
+Dec 2023 – Juli 2024
+Computer Vision Developer
+• Pengembangan penentuan lokasi robot melalui citra lapangan sepak bola.
+• Pengembangan deteksi obstacle (lawan maupun teman) untuk mendukung navigasi robot.
+• Pengembangan deteksi berbasis deep learing dengan Yolo V8 & TensorFlow.
+logo = /home/dimas/portofolio/template/public/assets/experience/ersow.png
+
+Electronic Innovation Center - Surabaya
+Aug 2021 – Nov 2023
+Programmer
+• Pengembangan berbagai inovasi prototype berbasis Internet of Things dengan mikrokontroller yang
+terhubung dengan aplikasi berbasis website dan aplikasi mobile.
+logo = /home/dimas/portofolio/template/public/assets/experience/elite.jpeg
+
+Arrahman Invitation – Surabaya
+Mar 2023 – Nov 2023
+Website Developer (Remote)
+• Pengembangan sistem berbasis website pembuatan undangan digital, menggunakan HTML, CSS,
+JavaScript, MySQL, dan WordPress untuk mengelola pembuatan template undangan yang dapat
+digunakan oleh berbagai pelanggan.
+logo = /home/dimas/portofolio/template/public/assets/experience/arrahman.jpg
+
+PT. Duta Media Cipta – Surabaya
+Jan 2022 – Jun 2022
+Website Developer Intern
+• Pengembangan aplikasi e-commerce berbasis WordPress, yang mencakup pembuatan dan pengelolaan
+fitur-fitur untuk transaksi online. Selain itu, Anda juga bertanggung jawab untuk membangun website
+manajemen menggunakan framework PHP yang dipadukan dengan JavaScript dan MySQL untuk
+mendukung kebutuhan manajemen dan operasional yang efisien bagi pengguna atau pelanggan.
+logo: /home/dimas/portofolio/template/public/assets/experience/dmc.png

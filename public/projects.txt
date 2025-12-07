@@ -1,0 +1,43 @@
+Neuro trafic
+NeuroTraffic adalah sistem analisis lalu lintas real-time yang menggunakan teknologi Deep Learning dan Computer Vision untuk mendeteksi, menghitung, dan memprediksi kepadatan lalu lintas di Jl. Tunjungan, Surabaya.
+Sistem ini menggunakan:
+YOLOv8 untuk deteksi kendaraan real-time
+Deep Neural Network (DNN) untuk klasifikasi kepadatan lalu lintas
+Vehicle Tracking dengan IoU-based matching
+OCR (Tesseract) untuk ekstraksi timestamp dari video
+github https://github.com/dimasfr28/trafic-tunjungan-detection-analysis-app/
+
+Socnganalis
+Platform analytics all-in-one yang menggabungkan scraping Twitter/X, analisis sentimen AI, clustering machine learning, dan visualisasi interaktif untuk membantu Anda memahami performa media sosial secara mendalam.
+✅ Multi-Dataset Management - Upload dan kelola berbagai dataset tanpa overwrite
+✅ AI-Powered Sentiment Analysis - Analisis sentimen menggunakan LinearSVM & TF-IDF
+✅ Smart Twitter Scraper - Scrape replies dengan dynamic limit berdasarkan engagement
+✅ Topic Modeling - Identifikasi topik dan pilar konten secara otomatis
+✅ Peak Hours Detection - Temukan jam terbaik untuk posting menggunakan DBSCAN clustering
+✅ Interactive Dashboard - Visualisasi real-time dengan Chart.js
+✅ Dockerized - Deploy dengan satu command
+github: https://github.com/dimasfr28/socnganalis
+
+Tunarasa
+Tunarasa adalah platform inklusif yang menerjemahkan bahasa isyarat dan membantu akses layanan publik menggunakan AI. Sistem ini memadukan Computer Vision, LLM, dan RAG untuk menghadirkan interaksi yang lebih adaptif bagi penyandang disabilitas pendengaran.
+github: https://github.com/ArielSulton/tunarasa
+
+I-CLIC
+I-CLIC adalah sistem konsultasi kesehatan yang menggabungkan LLM dan model Machine Learning untuk diagnosis gejala secara cepat. Backend dibangun dengan FastAPI dan PostgreSQL untuk mengelola data, autentikasi, dan riwayat konsultasi.
+github: https://github.com/AfifH07/I-CLIC
+
+Big Data Pipeline Simulation
+simulasi pipeline big data yang melibatkan proses ekstraksi, transformasi, dan pemuatan data (ETL) untuk transaksi produk. Pipeline ini mengambil informasi produk dari API eksternal, memproses dan menyimpannya di PostgreSQL, memindahkan data ke HDFS, melakukan analisis menggunakan Spark, kemudian mentransfer data ke Hive dan HBase untuk pemrosesan dan visualisasi lebih lanjut
+tanpa github
+
+SIMOCI
+SIMOCI adalah sistem monitoring kesehatan yang memanfaatkan IoT, Machine Learning, dan YOLO untuk deteksi objek serta pemantauan pasien jarak jauh. Aplikasi ini memungkinkan analisis data medis dan konsultasi online dengan tenaga kesehatan.
+github: https://github.com/dimasfr28/simoci-monev2
+
+ELITE Management System
+ELITE adalah sistem digitalisasi administrasi organisasi robotika untuk mengelola anggota, kas, dan inventaris. Platform ini menyediakan fitur verifikasi admin, peminjaman barang, serta laporan otomatis dalam bentuk PDF.
+github: https://github.com/dimasfr28/elite-website
+
+WEMOS Water Monitoring
+WEMOS adalah sistem IoT yang memonitor penggunaan dan kualitas air secara real-time. Sistem ini juga mengontrol aliran air melalui web dan menampilkan semua data dalam dashboard visual.
+github: https://github.com/dimasfr28/wemos-website

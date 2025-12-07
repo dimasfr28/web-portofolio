@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for RAG Chatbot",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^6.1.3",
+    "groq-sdk": "^0.37.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
