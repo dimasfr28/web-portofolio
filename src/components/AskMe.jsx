@@ -24,6 +24,7 @@ const AskMe = () => {
   // Initialize on mount
   useEffect(() => {
     initializeChatbot();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Initialize chatbot

@@ -108,7 +108,6 @@ const Experience = () => {
         const timelineHeight = timelineRef.current.offsetHeight;
 
         if (rect.top < windowHeight && rect.bottom > 0) {
-          const visibleStart = Math.max(0, windowHeight - rect.top);
           const visibleEnd = Math.min(timelineHeight, windowHeight - rect.top + windowHeight);
           const progress = Math.min(100, (visibleEnd / timelineHeight) * 100);
           setScrollProgress(progress);

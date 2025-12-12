@@ -26,8 +26,9 @@ const Hero = () => {
         }
       }
     }, isDeleting ? 50 : 100);
-    
+
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [displayText, isDeleting, currentIndex]);
 
   return (
