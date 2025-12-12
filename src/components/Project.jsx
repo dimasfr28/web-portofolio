@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Project.css';
 import SectionTitle from './SectionTitle';
 
 const Project = () => {
   const [filter, setFilter] = useState('all');
   const [currentImageIndex, setCurrentImageIndex] = useState({});
+  const [slideDirection, setSlideDirection] = useState({});
 
   const projects = [
     {
@@ -150,8 +151,40 @@ const Project = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Auto-scroll carousel every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlideDirection(prev => {
+        const newDirections = { ...prev };
+        projects.forEach(project => {
+          if (project.images.length > 1) {
+            newDirections[project.id] = 'right';
+          }
+        });
+        return newDirections;
+      });
+
+      setCurrentImageIndex(prev => {
+        const newIndices = { ...prev };
+        projects.forEach(project => {
+          if (project.images.length > 1) {
+            newIndices[project.id] = ((prev[project.id] || 0) + 1) % project.images.length;
+          }
+        });
+        return newIndices;
+      });
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Handle next image
   const nextImage = (projectId, imageCount) => {
+    setSlideDirection(prev => ({
+      ...prev,
+      [projectId]: 'right'
+    }));
     setCurrentImageIndex(prev => ({
       ...prev,
       [projectId]: (prev[projectId] + 1) % imageCount
@@ -160,6 +193,10 @@ const Project = () => {
 
   // Handle previous image
   const prevImage = (projectId, imageCount) => {
+    setSlideDirection(prev => ({
+      ...prev,
+      [projectId]: 'left'
+    }));
     setCurrentImageIndex(prev => ({
       ...prev,
       [projectId]: prev[projectId] === 0 ? imageCount - 1 : prev[projectId] - 1
@@ -188,14 +225,17 @@ const Project = () => {
             const images = project.images;
             const currentIndex = currentImageIndex[project.id] || 0;
             const hasMultipleImages = images.length > 1;
+            const direction = slideDirection[project.id] || 'right';
 
             return (
               <div key={project.id} className="project-card">
                 <div className="project-image-wrapper">
                   <div className="project-image">
                     <img
+                      key={`${project.id}-${currentIndex}`}
                       src={images[currentIndex]}
                       alt={`${project.title} - ${currentIndex + 1}`}
+                      className={`slide-${direction}-enter`}
                       onError={(e) => {
                         e.target.src = `/assets/project/${project.folder}/${project.folder}.png`;
                       }}
@@ -228,7 +268,13 @@ const Project = () => {
                           <span
                             key={idx}
                             className={`indicator ${idx === currentIndex ? 'active' : ''}`}
-                            onClick={() => setCurrentImageIndex(prev => ({...prev, [project.id]: idx}))}
+                            onClick={() => {
+                              setSlideDirection(prev => ({
+                                ...prev,
+                                [project.id]: idx > currentIndex ? 'right' : 'left'
+                              }));
+                              setCurrentImageIndex(prev => ({...prev, [project.id]: idx}));
+                            }}
                           />
                         ))}
                       </div>

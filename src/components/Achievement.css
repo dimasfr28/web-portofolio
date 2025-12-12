@@ -2,11 +2,70 @@
   padding: 6rem 2rem;
   background: #000000;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 58, 237, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(168, 85, 247, 0.1), transparent),
+    radial-gradient(ellipse 60% 40% at 20% 50%, rgba(124, 58, 237, 0.1), transparent);
+  animation: aurora 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.achievement::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 100%, rgba(124, 58, 237, 0.12), transparent),
+    radial-gradient(ellipse 70% 60% at 70% 100%, rgba(168, 85, 247, 0.08), transparent);
+  animation: aurora-reverse 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes aurora {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0) scale(1);
+  }
+  33% {
+    opacity: 0.5;
+    transform: translateY(-10%) scale(1.1);
+  }
+  66% {
+    opacity: 0.4;
+    transform: translateY(5%) scale(0.95);
+  }
+}
+
+@keyframes aurora-reverse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(-8%) scale(1.05) rotate(2deg);
+  }
 }
 
 .achievement-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .achievements-grid {

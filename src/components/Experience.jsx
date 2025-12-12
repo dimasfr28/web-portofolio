@@ -10,7 +10,7 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      company: "Environmental AI Research Network (EARN) - Surabaya",
+      company: "Perum BULOG Kantor Wilayah Jawa Timur - Surabaya",
       logo: "/assets/experience/bulog.png",
       position: "Data Scientist Intern",
       period: "December 2025 – Present",

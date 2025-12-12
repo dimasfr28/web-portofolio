@@ -276,7 +276,7 @@ const Contact = () => {
       </div>
 
       <footer className="footer">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Dimas Firmansyah. All rights reserved.</p>
         <p>Built with React & Love</p>
       </footer>
     </section>

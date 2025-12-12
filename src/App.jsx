@@ -13,27 +13,31 @@ import './App.css';
 
 function App() {
   useEffect(() => {
-    // Prevent any auto-scroll behavior
-    const preventScroll = () => {
-      window.scrollTo(0, 0);
-    };
-
-    // Clear hash from URL
+    // Clear hash from URL immediately
     if (window.location.hash) {
       window.history.replaceState(null, null, window.location.pathname);
     }
+
+    // Disable smooth scrolling during initial load
+    document.documentElement.classList.remove('smooth-scroll');
 
     // Force scroll to top immediately
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 
-    // Prevent scroll for a short time after mount
-    window.addEventListener('scroll', preventScroll);
+    // Prevent any scroll attempts during page load
+    const preventScroll = () => {
+      window.scrollTo(0, 0);
+    };
 
+    window.addEventListener('scroll', preventScroll, { passive: false });
+
+    // After page is fully loaded, enable smooth scrolling
     const timeout = setTimeout(() => {
       window.removeEventListener('scroll', preventScroll);
-    }, 100);
+      document.documentElement.classList.add('smooth-scroll');
+    }, 500);
 
     return () => {
       clearTimeout(timeout);
