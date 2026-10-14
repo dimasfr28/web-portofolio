@@ -67,7 +67,7 @@ src/
   sections/          Nav, Hero, About, Experience, Projects, Achievements, ContactPanel, Footer, ui
   services/          ragService.js, retrieval.js
   utils/             documentLoader.js, css.js
-netlify/functions/   optional server-side chat functions (not used by the site yet)
+netlify/functions-disabled/   server-side chat functions, not deployed (rename to netlify/functions to enable)
 ```
 
 ## Deployment
