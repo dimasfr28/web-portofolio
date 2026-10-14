@@ -15,7 +15,7 @@ export const instagramHref = 'https://www.instagram.com/dimasfrmnsyahh/';
 
 export const experiences = [
   {
-    key: 'sevima', num: '01', date: 'AUG 26 – NOV 26', kind: 'INTERNSHIP & COLAB REASEARCH', latest: true,
+    key: 'sevima', num: '01', date: 'AUG 26 – NOV 26', kind: 'INTERNSHIP & RESEARCH', latest: true,
     role: 'AI Software Engineer', org: 'SEVIMA: PT Sentra Vidya Utama',
     logo: asset('experience/sevima/sevima.jpeg'), initials: 'SV',
     bullets: [
