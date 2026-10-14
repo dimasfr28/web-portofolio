@@ -1,0 +1,200 @@
+Projects by Dimas Firmansyah, newest first.
+
+Project 01: Ball Trajectory and Arrival Time Prediction for Autonomous Robot Goalkeeper
+Category: ROBOTICS · ARTIFICIAL INTELLIGENCE · RESEARCH
+Summary: Regression models predict where and when the ball arrives, so the ERSOW goalkeeper blocks shots in real time. Accepted at the 2026 International Electronics Symposium (IES).
+Tech stack: C++, mlpack, Machine Learning, Computer Vision, OpenCV, Intel RealSense, PID Control
+What it does:
+- Developed an end-to-end machine learning system using C++ and mlpack to predict ball trajectories, interception coordinates, and arrival times for the ERSOW autonomous goalkeeper.
+- Integrated omnidirectional and Intel RealSense D455 cameras for real-time ball detection, localization, and distance estimation.
+- Implemented data preprocessing, outlier removal, and motion feature extraction to improve trajectory prediction reliability.
+- Developed and evaluated regression-based machine learning models, achieving 2.8 cm MAE and 0.62% MAPE in ball trajectory prediction.
+- Integrated machine learning predictions with robot motion control using PID controllers and inverse kinematics for autonomous shot blocking.
+- Achieved 35 ms average computation time and successfully blocked all 10 tested shots at 3–7 m/s ball speeds.
+- Research paper accepted at the 2026 International Electronics Symposium (IES).
+Link: https://ieeexplore.ieee.org/document/11702559
+
+Project 02: WoMAI: Wearable Operational Machine Agentic AI
+Category: ARTIFICIAL INTELLIGENCE · SOFTWARE ENGINEERING · IoT
+Summary: AI-powered predictive maintenance for industrial milling machines: ESP32 sensors, XGBoost early warnings, SHAP explanations and a LangGraph Corrective RAG agent.
+Tech stack: Python, Scikit-learn, SHAP, LLM, RAG, LangGraph, Gemini API, ChromaDB, FastAPI, Next.js, ESP32, Docker, Agentic AI
+What it does:
+- Developed an end-to-end AI-powered predictive maintenance platform integrating IoT sensors, machine learning, and Agentic AI to monitor industrial milling machines.
+- Built an ESP32-based IoT monitoring system using temperature and rotational speed sensors, transmitting machine operating data to a FastAPI backend for analysis.
+- Implemented XGBoost-based machine failure classification and a 10-minute prediction horizon, providing early warnings of potential failures through Telegram notifications.
+- Integrated SHAP explainability to identify contributing factors behind machine failure predictions, helping engineers interpret model outputs.
+- Developed an automated document extraction pipeline using MinerU and vector embeddings, transforming machine manuals and technical documents into a searchable ChromaDB knowledge base.
+- Built an Agentic AI system using LangGraph, LLMs, and Corrective RAG to perform root-cause analysis, retrieve maintenance procedures, and generate context-based repair recommendations.
+- Implemented a what-if simulation feature that allows engineers to adjust machine parameters and evaluate potential changes in failure risk without modifying actual sensor data.
+- Developed a web-based Machine Copilot and interactive dashboard using Next.js, integrating AI diagnostics, machine monitoring, maintenance history, and technical document retrieval.
+- Automated the generation of PDF maintenance reports, including failure predictions, SHAP explanations, recommended actions, relevant SOPs, and estimated replacement-part costs.
+Link: https://github.com/dimasfr28
+
+Project 03: Finite State Machine for Autonomous Soccer Robot Intelligence
+Category: ROBOTICS · AUTONOMOUS SYSTEMS · ARTIFICIAL INTELLIGENCE
+Summary: FSM-based decision-making that coordinates ERSOW soccer robot behaviors: ball approach, dribbling, passing, kick-off and defensive positioning.
+Tech stack: Finite State Machine, C++, ROS, Computer Vision, Autonomous Decision-Making, Robot Behavior Control
+What it does:
+- Developed a Finite State Machine (FSM)-based decision-making system to coordinate autonomous soccer robot behaviors for the ERSOW robotic soccer team.
+- Designed a state-based control architecture to organize robot actions, behavioral transitions, and execution of soccer-related tasks.
+- Integrated robot positioning and ball interaction behaviors to support autonomous movement, ball approach, and gameplay execution.
+- Implemented behavioral logic for ball handling, dribbling, passing, and kick-off sequences, enabling structured transitions between robot actions.
+- Incorporated defensive positioning and interception strategies to support responses to changing ball positions and gameplay situations.
+- Integrated computer vision information into robot behavior decisions, supporting ball localization and environmental awareness.
+- Designed obstacle avoidance behaviors to help robots navigate around other robots and objects on the playing field.
+- Supported multi-robot coordination through organized offensive and defensive behaviors, including positioning and passing.
+- Conducted physical robot demonstrations to observe autonomous positioning, kick-off, passing, dribbling, and shooting behaviors on a robotic soccer field.
+- Developed the behavior-control approach within the ERSOW autonomous soccer robot platform, supporting research and development for robotic soccer competitions.
+Link: no public repository.
+
+Project 04: NeuroTraffic: AI-Powered Traffic Analysis System
+Category: AI / ML
+Summary: Semi-real-time traffic monitoring from Surabaya's SITS CCTV: YOLOv8 detection, tracking, density clustering and a DNN congestion classifier.
+Tech stack: Python, YOLOv8, PyTorch, Deep Neural Network, Computer Vision, Appium, FastAPI, Docker, Chart.js
+What it does:
+- Developed a semi-real-time traffic monitoring system using CCTV footage from Surabaya's Intelligent Transport System (SITS).
+- Automated CCTV video collection using Python and Appium, integrating vehicle detection, tracking, and counting for cars, motorcycles, and heavy vehicles.
+- Implemented YOLOv8s for vehicle detection, achieving 86% mAP@0.5, and applied clustering to categorize traffic density into low, medium, and high levels.
+- Developed a Deep Neural Network (DNN) achieving 96.43% classification accuracy for traffic congestion analysis.
+- Built an interactive web dashboard featuring traffic visualization, historical analytics, peak-hour identification, and video-based traffic prediction.
+Link: https://github.com/dimasfr28/trafic-tunjungan-detection-analysis-app
+
+Project 05: SOCNGANALIS: AI-Powered Social Media Analytics Platform
+Category: ARTIFICIAL INTELLIGENCE · NLP · SOFTWARE ENGINEERING
+Summary: AI-powered social media analytics: Twitter/X scraping, LinearSVM sentiment, DBSCAN engagement clustering, topic and emotion analysis in a Django dashboard.
+Tech stack: Python, LinearSVM, TF-IDF, Scikit-learn, DBSCAN, PCA, NLP, FastAPI, Django, PostgreSQL, Chart.js, Docker
+What it does:
+- Developed an end-to-end AI-powered social media analytics platform integrating Twitter/X data collection, sentiment analysis, topic extraction, emotion classification, and interactive visualizations.
+- Implemented a Twitter/X scraping pipeline using tweet-harvest to collect user replies and engagement data, supporting automated data collection and preprocessing.
+- Integrated a LinearSVM machine learning model with TF-IDF vectorization to classify Indonesian social media comments into positive, negative, and neutral sentiments.
+- Applied DBSCAN clustering and PCA visualization to identify peak engagement hours, analyze user activity patterns, and recommend optimal posting schedules.
+- Implemented NLP-based topic extraction and content pillar analysis to identify trending discussions, frequently used keywords, and hashtag patterns.
+- Developed an emotion analysis module to categorize user responses into joy, sadness, anger, fear, and surprise, providing deeper insights beyond sentiment classification.
+- Built a social media analytics dashboard using Django and Chart.js, displaying engagement metrics, sentiment distributions, activity trends, topic analysis, and content performance.
+- Developed RESTful analytics APIs using FastAPI, integrating machine learning inference, data processing, and PostgreSQL database management.
+- Implemented a multi-dataset management system supporting dataset uploads, switching, deletion, and independent analysis without overwriting existing data.
+- Containerized the application using Docker Compose, integrating Django, FastAPI, and PostgreSQL for reproducible deployment.
+Link: https://github.com/dimasfr28/socnganalis
+
+Project 06: Tunarasa: AI-Powered Inclusive Communication Platform
+Category: ARTIFICIAL INTELLIGENCE · COMPUTER VISION · SOFTWARE ENGINEERING
+Summary: Inclusive communication platform: real-time SIBI sign language recognition, LLM text correction and a RAG chatbot for public service providers.
+Tech stack: Python, TensorFlow.js, MediaPipe, Computer Vision, LLaMA, LangChain, RAG, Pinecone, K-Means, Scikit-learn, Next.js, FastAPI, Supabase, Docker, Grafana, Prometheus, DeepEval
+What it does:
+- Developed an AI-powered inclusive communication platform integrating computer vision, speech recognition, and LLMs to facilitate communication between people with hearing or speech disabilities and public service providers.
+- Implemented real-time Indonesian Sign Language (SIBI) recognition using TensorFlow.js and MediaPipe, extracting hand landmarks and classifying finger gestures into text.
+- Integrated an LLM-based text correction system to refine sign language recognition outputs, improving translation accuracy from 78% to approximately 97–98% in reported evaluations.
+- Developed a Retrieval-Augmented Generation (RAG) chatbot using LangChain, LLaMA, and Pinecone to retrieve institution-specific information from uploaded public service documents.
+- Built an automated document processing pipeline for extracting, segmenting, embedding, and indexing institutional service guidelines into a searchable vector database.
+- Implemented a content-based recommendation system using multilingual text embeddings and K-Means clustering to identify frequently asked questions and recommend relevant topics to users.
+- Integrated speech-to-text functionality to support two-way communication between users and public service administrators.
+- Developed an interactive web application using Next.js and Supabase, supporting user conversations, administrator responses, role-based access control, and institutional knowledge management.
+- Implemented an LLM-powered conversation summarization feature that generates PDF conversation notes accessible through QR codes.
+- Integrated human-in-the-loop response validation, allowing administrators to review, correct, or directly respond to questions handled by the AI chatbot.
+- Built an AI observability and monitoring dashboard using Grafana, Prometheus, and DeepEval to track API performance, system health, LLM response quality, and recommendation clustering metrics.
+- Containerized application components using Docker to support deployment and integration across system services.
+Link: https://github.com/ArielSulton/tunarasa
+
+Project 07: I-CLIC: Intelligent Clinic Care
+Category: ARTIFICIAL INTELLIGENCE · MACHINE LEARNING · SOFTWARE ENGINEERING
+Summary: AI healthcare consultation: an LLM extracts symptoms, a Random Forest screens respiratory diseases, served through FastAPI and Django.
+Tech stack: Python, Random Forest, Scikit-learn, PyCaret, Optuna, LLM, NLP, FastAPI, Django, PostgreSQL, Docker
+What it does:
+- Developed an AI-powered healthcare consultation platform integrating LLMs, machine learning, and NLP to provide preliminary respiratory disease screening through conversational interactions.
+- Built an LLM-based symptom extraction pipeline to transform natural language consultations into structured features for machine learning predictions.
+- Developed a Random Forest classification model to identify potential respiratory conditions, including bronchitis, influenza, common cold, and pneumonia.
+- Implemented a complete machine learning pipeline, including exploratory data analysis, feature engineering, categorical encoding, Min-Max normalization, and Chi-Square feature selection.
+- Applied SMOTE-Tomek resampling to address class imbalance and improve classification performance on underrepresented respiratory disease categories.
+- Conducted model comparison and hyperparameter optimization using PyCaret and Optuna, achieving 100% accuracy on the reported test dataset with the optimized Random Forest model.
+- Developed a FastAPI-based inference backend integrating LLM symptom extraction, machine learning predictions, and chatbot consultation endpoints.
+- Implemented automated web scraping and article recommendations to provide educational health content relevant to predicted respiratory conditions.
+- Built a Django-based web application with user authentication, interactive AI chatbot consultations, symptom history, prediction results, and recommended health articles.
+- Designed a PostgreSQL relational database to manage user profiles, symptoms, disease predictions, conversation history, and authentication data.
+- Containerized the application using Docker Compose, orchestrating Django, FastAPI, and PostgreSQL services for consistent deployment environments.
+Link: https://github.com/AfifH07/I-CLIC
+
+Project 08: Autonomous Soccer Robot Localization Using Omnidirectional Cam
+Category: ROBOTICS · COMPUTER VISION · AUTONOMOUS SYSTEMS
+Summary: Vision-based localization for the ERSOW soccer robot: omnidirectional camera, HSV field segmentation and radial search lines instead of wheel odometry.
+Tech stack: C++, OpenCV, ROS, Computer Vision, Omnidirectional Camera, HSV Color Segmentation, Image Processing, Radial Search Line, Regression
+What it does:
+- Contributed to the development of a vision-based robot localization system for the ERSOW autonomous soccer robot, designed to estimate robot positioning using visual field landmarks.
+- Utilized a 360-degree omnidirectional camera to capture the surrounding soccer field, enabling field detection and boundary identification from multiple directions.
+- Implemented an image processing pipeline using OpenCV, including Region of Interest (ROI) cropping, RGB-to-HSV conversion, color thresholding, and contour detection.
+- Applied HSV color segmentation to distinguish the green playing field from surrounding areas and identify black field boundaries as localization references.
+- Implemented morphological operations, including erosion and dilation, to reduce image noise, improve field segmentation, and refine detected boundaries.
+- Utilized Convex Hull and contour processing to identify field regions and distinguish boundary structures from surrounding visual information.
+- Designed a Radial Search Line algorithm operating at 0°, 90°, 180°, and 270° to identify field boundary positions relative to the robot's camera center.
+- Designed a distance estimation approach using regression-based pixel-to-centimeter conversion to support the calculation of robot coordinates relative to detected field boundaries.
+- Investigated vision-based localization as an alternative to wheel odometry, addressing positional drift caused by wheel slippage and rotary encoder inaccuracies.
+- Evaluated field detection performance under different lighting conditions, achieving approximately 20 FPS in dim lighting, 29 FPS in normal lighting, and 33 FPS in bright lighting.
+- Tested field boundary detection ranges, reaching up to 260 cm in dim conditions, 340 cm in normal conditions, and 380 cm in bright conditions.
+- Developed the vision-processing approach for the ERSOW autonomous soccer robot, supporting research toward more reliable robot positioning in competitive robotic soccer environments.
+Link: no public repository.
+
+Project 09: Big Data Pipeline Simulation
+Category: DATA
+Summary: ETL from an external API through PostgreSQL and HDFS, analysed in Spark, then served via Hive and HBase.
+Tech stack: ETL, PostgreSQL, HDFS, Spark, Hive, HBase
+What it does:
+- Simulates an ETL pipeline for product transaction data
+- Pulls data from an external API, then processes and stores it in PostgreSQL
+- Moves the data into HDFS for distributed storage
+- Analyses the data with Apache Spark
+- Loads results into Hive and HBase for processing and visualization
+Link: no public repository.
+
+Project 10: SIMOCI: AI-Powered Remote Patient Health Monitoring System
+Category: ARTIFICIAL INTELLIGENCE · COMPUTER VISION · INTERNET OF THINGS
+Summary: AI-powered remote patient monitoring prototype: ESP32 medical sensors, YOLOv8 height estimation, ML screening, Flutter app and online consultation.
+Tech stack: Python, YOLOv8, Computer Vision, OpenCV, Supervised Learning, ESP32, Arduino, Firebase Realtime Database, Flutter, Dart, PyQt, IoT
+What it does:
+- Developed an IoT-based telemedicine prototype integrating medical sensors, computer vision, machine learning, and mobile applications to support remote patient health monitoring.
+- Integrated ESP32 microcontrollers and medical sensors to collect patient health measurements, including blood pressure, heart rate, body temperature, body weight, and environmental temperature.
+- Implemented YOLOv8-based computer vision for automated body height estimation, converting detected pixel measurements into centimeters using linear regression.
+- Developed a Python-based hardware interface using PyQt and OpenCV to manage medical sensors, camera operations, and patient health measurements.
+- Built a real-time data communication pipeline connecting medical sensors, ESP32, a mini PC, and Firebase Realtime Database for synchronized health monitoring.
+- Integrated supervised machine learning to analyze patient health measurements and generate preliminary disease predictions supporting medical consultations.
+- Developed a Flutter-based mobile application that allows healthcare professionals to remotely monitor patient conditions and access measurement results.
+- Implemented two-way online consultation features to facilitate communication between patients and medical professionals after preliminary health assessments.
+- Designed a self-service health examination workflow that enables patients to collect multiple health measurements through an integrated medical monitoring device.
+- Conducted sensor accuracy evaluations against reference medical devices, reporting average measurement differences of 2 mmHg systolic, 3 mmHg diastolic, 2 kg body weight, and 0.3°C temperature.
+- Evaluated real-time data transmission performance, achieving an average communication time of approximately 0.706 seconds during prototype testing.
+- Developed and tested the prototype as part of the 2024 Student Creativity Program (PKM-KC), including prototype evaluations with healthcare personnel.
+Link: https://github.com/dimasfr28/simoci-monev2
+
+Project 11: ELITE Management System: Robotics Organization Management Platform
+Category: SOFTWARE ENGINEERING · FULL-STACK WEB DEVELOPMENT
+Summary: Management platform for the ELITE robotics organization: five-role access control, inventory lending, finance tracking and automatic PDF reports.
+Tech stack: PHP, MySQL, JavaScript, jQuery, Bootstrap 5, HTML/CSS, mPDF, FPDI, CKEditor
+What it does:
+- Developed a full-stack web-based management system to digitalize administrative workflows for the Electronic Innovation Center (ELITE), a robotics organization at SMKN 2 Surabaya.
+- Implemented role-based access control (RBAC) with five user roles: Administrator, Inventory Manager, Treasurer, Member, and Alumni, each with dedicated dashboards and permissions.
+- Built a member registration and verification system with account approval workflows, profile management, class administration, and role-based authentication.
+- Developed an inventory management module supporting equipment categorization, stock monitoring, item management, and inventory availability tracking.
+- Implemented a multi-item equipment lending system with shopping-cart functionality, borrowing requests, administrator approvals, return tracking, and borrowing history.
+- Built a financial management system to record member contributions, organizational income, expenses, transaction categories, and automatically calculated cash balances.
+- Implemented automated PDF report generation using mPDF and FPDI, producing monthly and comprehensive financial and inventory reports.
+- Designed and integrated a MySQL relational database to manage user accounts, inventory records, borrowing transactions, financial activities, and organizational information.
+- Developed an administrative content management module for publishing organizational announcements, achievements, and member-related information.
+- Implemented session-based authentication and password hashing, supporting role-specific access and account management.
+- Built a responsive web interface using Bootstrap 5, JavaScript, and jQuery, including dedicated dashboards, interactive forms, and administrative notifications.
+Link: https://github.com/dimasfr28/elite-website
+
+Project 12: WEMOS: IoT-Based Water Monitoring & Control System
+Category: INTERNET OF THINGS · EMBEDDED SYSTEMS · SOFTWARE ENGINEERING
+Summary: IoT water monitoring and control: ESP8266 with flow and turbidity sensors, remote valve control, live dashboard and automatic billing estimates.
+Tech stack: WEMOS D1 Mini (ESP8266), IoT, PHP, MySQL, JavaScript, AJAX, jQuery, Bootstrap 5, Chart.js, Water Flow Sensor, Turbidity Sensor, Solenoid Valve
+What it does:
+- Developed an IoT-based water monitoring and control platform integrating ESP8266 microcontrollers, environmental sensors, and a web application for monitoring water consumption and quality.
+- Integrated a WEMOS D1 Mini (ESP8266) with water flow and turbidity sensors to collect water usage measurements and monitor water clarity.
+- Implemented a remote water flow control system using a relay-controlled solenoid valve, allowing users to open or close water supply through a web dashboard.
+- Developed a PHP-based backend to process sensor readings, manage valve control commands, calculate water consumption, and retrieve monitoring data.
+- Designed a MySQL relational database to store water flow measurements, turbidity readings, valve status, timestamps, and user information.
+- Built a real-time monitoring dashboard displaying daily water consumption, water quality status, valve conditions, and water usage statistics.
+- Implemented interactive data visualizations using Chart.js, enabling users to analyze daily water usage patterns and monthly consumption trends.
+- Developed an automated water billing calculation system that estimates daily and monthly water costs based on measured consumption and predefined tariffs.
+- Integrated AJAX-based asynchronous data retrieval to update dashboard information without requiring full-page reloads.
+- Implemented water quality monitoring using turbidity sensor measurements to categorize water conditions as clear or turbid.
+- Built a responsive web interface using Bootstrap 5 and JavaScript, providing water monitoring, valve controls, billing information, and user authentication.
+Link: https://github.com/dimasfr28/wemos-website

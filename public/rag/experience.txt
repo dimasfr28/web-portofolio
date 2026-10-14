@@ -1,0 +1,67 @@
+Professional experience of Dimas Firmansyah, newest first.
+
+AI Software Engineer at SEVIMA: PT Sentra Vidya Utama
+Period: August 2026 – November 2026 · Type: Internship & collaborative research
+Highlights:
+- Researched an AI-based accreditation reporting system in collaboration with PENS
+- Built automated document extraction for accreditation guidelines and supporting documents
+- Implemented RAG and LLMs to draft evidence-based Self-Evaluation Report (LED) narratives
+Skills used: RAG, LLM, Document Extraction
+
+Data Scientist Intern at Perum BULOG, East Java Regional Office
+Period: December 2025 – Present · Type: Internship
+Highlights:
+- Built a predictive modeling application for production and demand
+- Developed the data warehouse pipeline that feeds the application platform
+Skills used: Predictive Modeling, Data Warehouse
+
+Research Member at EARN: Environmental AI Research Network
+Period: August 2025 – Present · Type: Research
+Highlights:
+- Ran community service programs on environmental awareness and sustainability
+- Conducted IT and AI-based research to tackle environmental problems
+Skills used: Environmental AI, Community Service
+
+AI Engineer & General Manager at ERSOW: EEPIS Robot Soccer on Wheeled
+Period: August 2024 – Present · Type: Research team
+Highlights:
+- Coordinated cross-division teams to reach KRSBI-B research targets
+- Built autonomous robot navigation with potential fields to avoid dynamic obstacles
+- Developed a ball trajectory prediction model to set the robot's defensive position
+Skills used: Path Planning, Machine Learning, Team Lead
+
+Mentor at EDUST: EEPIS Data Enthusiast
+Period: August 2025 – December 2025 · Type: Community
+Highlights:
+- Shared learning material and led hands-on sessions with the EDUST community
+- Taught data engineering topics, especially SQL operations for data science
+Skills used: SQL, Data Engineering
+
+Computer Vision Developer at ERSOW: EEPIS Robot Soccer on Wheeled
+Period: December 2023 – July 2024 · Type: Research team
+Highlights:
+- Built a robot localization system based on field images
+- Developed obstacle detection algorithms for teammates and opponents
+- Trained deep learning detection models with YOLOv8 and TensorFlow
+Skills used: YOLOv8, TensorFlow, Localization
+
+Website Developer at Arrahman Invitation
+Period: March 2023 – November 2023 · Type: Remote
+Highlights:
+- Built a digital invitation platform with customizable templates using HTML, CSS, JavaScript, MySQL and WordPress
+Skills used: WordPress, JavaScript, MySQL
+
+Website Developer Intern at PT Duta Media Cipta
+Period: January 2022 – June 2022 · Type: Internship
+Highlights:
+- Built a WordPress-based e-commerce application with online transaction features
+- Developed a management website with PHP, JavaScript and MySQL
+Skills used: PHP, WordPress, MySQL
+
+Research & Development Division at ELITE: Electronic Innovation Center
+Period: September 2021 – August 2023 · Type: Research & Development
+Highlights:
+- Developed an autonomous robotic boat using ultrasonic sensors for maze navigation
+- Built IoT-based livestock monitoring prototypes to support foot-and-mouth disease prevention
+- Developed a remote water meter monitoring system to detect potential leaks
+Skills used: IoT, Robotics, Ultrasonic Sensors

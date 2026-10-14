@@ -1,78 +1,43 @@
 import Groq from 'groq-sdk';
+import { buildIndex, search } from './retrieval';
 
-// Initialize Groq client
-const groq = new Groq({
-  apiKey: process.env.REACT_APP_GROQ_API_KEY,
-  dangerouslyAllowBrowser: true
-});
-
-// In-memory vector store
-let documentChunks = [];
-
-// Simple text-based embedding (bag-of-words)
-function generateEmbedding(text) {
-  const words = text.toLowerCase().split(/\s+/);
-  const wordSet = [...new Set(words)];
-  const embedding = new Array(768).fill(0);
-
-  wordSet.forEach(word => {
-    const hash = word.split('').reduce((acc, char) => {
-      return ((acc << 5) - acc) + char.charCodeAt(0);
-    }, 0);
-    const index = Math.abs(hash) % 768;
-    embedding[index] += 1;
-  });
-
-  // Normalize
-  const magnitude = Math.sqrt(embedding.reduce((sum, val) => sum + val * val, 0));
-  return embedding.map(val => magnitude > 0 ? val / magnitude : 0);
-}
-
-// Calculate cosine similarity
-function cosineSimilarity(vec1, vec2) {
-  let dotProduct = 0;
-  for (let i = 0; i < vec1.length; i++) {
-    dotProduct += vec1[i] * vec2[i];
+// Groq client is created on first use: the SDK throws when the API key is missing,
+// which would otherwise crash the whole page at import time.
+let groqClient = null;
+const getGroq = () => {
+  if (!groqClient) {
+    groqClient = new Groq({
+      apiKey: process.env.REACT_APP_GROQ_API_KEY,
+      dangerouslyAllowBrowser: true
+    });
   }
-  return dotProduct;
-}
+  return groqClient;
+};
+
+// In-memory document index
+let documentIndex = buildIndex([]);
 
 // Store document chunks in memory
 export const storeDocumentChunks = (chunks) => {
-  documentChunks = chunks.map(chunk => ({
-    text: chunk.text,
-    source: chunk.source,
-    embedding: generateEmbedding(chunk.text)
-  }));
-  console.log(`✅ Stored ${documentChunks.length} chunks in memory`);
-  return documentChunks.length;
+  documentIndex = buildIndex(chunks);
+  console.log(`✅ Stored ${documentIndex.docs.length} chunks in memory`);
+  return documentIndex.docs.length;
 };
 
 // Query relevant documents
-export const queryRelevantDocs = (query, topK = 3) => {
-  if (documentChunks.length === 0) {
+export const queryRelevantDocs = (query, topK = 5) => {
+  if (documentIndex.docs.length === 0) {
     console.warn('⚠️ No documents loaded');
     return [];
   }
-
-  const queryEmbedding = generateEmbedding(query);
-
-  // Calculate similarity scores
-  const scored = documentChunks.map(chunk => ({
-    text: chunk.text,
-    score: cosineSimilarity(queryEmbedding, chunk.embedding)
-  }));
-
-  // Sort by score and take top K
-  scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, topK).map(item => item.text);
+  return search(documentIndex, query, topK);
 };
 
 // Generate RAG response
 export const generateRAGResponse = async (userMessage, conversationHistory = []) => {
   try {
     console.log('🔍 Querying relevant docs for:', userMessage);
-    const relevantDocs = queryRelevantDocs(userMessage, 3);
+    const relevantDocs = queryRelevantDocs(userMessage, 5);
     console.log('📄 Found relevant docs:', relevantDocs.length);
 
     const context = relevantDocs.length > 0
@@ -88,6 +53,9 @@ Your role is to:
 - Be professional, friendly, and informative
 - If you don't have specific information, acknowledge it honestly
 - Use the context provided to give accurate answers
+- Answer ONLY from the information above. Never invent numbers, tools, dates, employers or results that are not written there
+- If the answer is not in the information above, say you don't have that detail instead of guessing
+- Reply in the same language as the question
 - Keep responses concise and relevant
 
 Remember: You are speaking on behalf of Dimas, so use first person when appropriate (e.g., "I worked on..." or "My experience includes...").`;
@@ -100,11 +68,10 @@ Remember: You are speaking on behalf of Dimas, so use first person when appropri
 
     console.log('🤖 Calling Groq API...');
     console.log('API Key exists:', !!process.env.REACT_APP_GROQ_API_KEY);
-    console.log('API Key prefix:', process.env.REACT_APP_GROQ_API_KEY?.substring(0, 10));
 
-    const completion = await groq.chat.completions.create({
+    const completion = await getGroq().chat.completions.create({
       messages: messages,
-      model: 'llama-3.3-70b-versatile',
+      model: process.env.REACT_APP_GROQ_MODEL || 'qwen/qwen3.8-27b',
       temperature: 0.7,
       max_tokens: 1024,
       top_p: 1,

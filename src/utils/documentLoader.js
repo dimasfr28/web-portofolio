@@ -15,6 +15,16 @@ function chunkText(text, chunkSize = 500, overlap = 50) {
   return chunks;
 }
 
+// Split a text file into one chunk per entry (entries are separated by blank lines),
+// so each project, job or award is retrieved as a whole. Very long entries fall back to word chunks.
+function chunkEntries(text) {
+  return text
+    .split(/\n\s*\n/)
+    .map((entry) => entry.trim())
+    .filter((entry) => entry.split(/\s+/).length >= 12)
+    .flatMap((entry) => (entry.split(/\s+/).length > 500 ? chunkText(entry, 500, 50) : [entry]));
+}
+
 // Load documents from text files
 export const loadAllDocuments = async () => {
   try {
@@ -22,10 +32,10 @@ export const loadAllDocuments = async () => {
 
     // Load experience.txt
     try {
-      const expResponse = await fetch('/experience.txt');
+      const expResponse = await fetch('/rag/experience.txt');
       if (expResponse.ok) {
         const expText = await expResponse.text();
-        const expChunks = chunkText(expText, 500, 50);
+        const expChunks = chunkEntries(expText);
         expChunks.forEach(chunk => {
           documents.push({
             text: chunk,
@@ -39,10 +49,10 @@ export const loadAllDocuments = async () => {
 
     // Load projects.txt
     try {
-      const projResponse = await fetch('/projects.txt');
+      const projResponse = await fetch('/rag/projects.txt');
       if (projResponse.ok) {
         const projText = await projResponse.text();
-        const projChunks = chunkText(projText, 500, 50);
+        const projChunks = chunkEntries(projText);
         projChunks.forEach(chunk => {
           documents.push({
             text: chunk,
@@ -56,10 +66,10 @@ export const loadAllDocuments = async () => {
 
     // Load achievement.txt
     try {
-      const achResponse = await fetch('/achievement.txt');
+      const achResponse = await fetch('/rag/achievement.txt');
       if (achResponse.ok) {
         const achText = await achResponse.text();
-        const achChunks = chunkText(achText, 500, 50);
+        const achChunks = chunkEntries(achText);
         achChunks.forEach(chunk => {
           documents.push({
             text: chunk,
